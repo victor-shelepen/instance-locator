@@ -4,8 +4,8 @@
 [![NPM](https://nodei.co/npm/instance-locator.png?downloads=true&downloadRank=true)](https://nodei.co/npm/instance-locator/)
 [![NPM](https://nodei.co/npm-dl/instance-locator.png?months=9&height=3)](https://nodei.co/npm/instance-locator/)
 
-The library helps to build your own module system. Barely it resolves Dependency Inversion Principle of SOLID.
-It is used as barebone for an application that simplify logic integration and its usage. 
+The library helps to build your own module system. Barely it resolves the Dependency Inversion Principle of SOLID.
+It is used as a barebone for an application that simplifies logic integration and its usage.
 
 Be free and ask me questions personally on [Gitter](https://gitter.im/vlikin/Lobby)
 
