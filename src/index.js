@@ -26,7 +26,7 @@ const instanceFactory  = (modelDefinition, locator) => {
   return instance
 }
 
-class ModelDefinition {
+export class ModelDefinition {
   constructor(name, model, parameterInstanceNames = [], factory=FACTORIES.instance) {
     this.name = name
     this.model = model
@@ -35,7 +35,7 @@ class ModelDefinition {
   }
 }
 
-class ContainerLocator {
+export class ContainerLocator {
 
   constructor({ factories = {} } = {}) {
     this.modelDefinitions = []
@@ -137,8 +137,8 @@ class ContainerLocator {
 
 }
 
-module.exports = {
-  ContainerLocator,
-  ModelDefinition,
-  FACTORIES
-}
+// module.exports = {
+//   ContainerLocator,
+//   ModelDefinition,
+//   FACTORIES
+// }

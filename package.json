@@ -6,8 +6,8 @@
   "scripts": {
     "lint": "eslint src/**/*.js test/**/*.js",
     "lint-fix": "eslint --fix src/**/*.js test/**/*.js",
-    "test": "mocha test/**/*.spec.js",
-    "coverage": "nyc npm run test"
+    "coverage": "jest --coverage=true",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,9 @@
     "src"
   ],
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-decorators": "^7.12.12",
+    "@babel/preset-env": "^7.12.11",
     "coveralls": "^3.0.9",
     "eslint": "^6.7.2",
     "eslint-config-standard": "^14.1.0",
@@ -30,7 +33,6 @@
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "mocha": "^6.2.2",
-    "nyc": "^15.0.0"
+    "jest": "^26.6.3"
   }
 }

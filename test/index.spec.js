@@ -39,7 +39,7 @@ describe('Instance locator', () => {
       db: Symbol('db')
     }
 
-    before(() => {
+    beforeAll(() => {
       locator = new ContainerLocator()
       locator
         .registerValue(TYPES.config, config)
@@ -68,7 +68,7 @@ describe('Instance locator', () => {
       assert(core == instance.core)
     })
 
-    after(() => {
+    afterAll(() => {
       locator.clearDefinitions()
     })
 
