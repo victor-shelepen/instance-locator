@@ -1,5 +1,4 @@
-const { ContainerLocator, ModelDefinition } = require('../src')
-const assert = require('assert')
+import { ContainerLocator, ModelDefinition } from '../src/index'
 
 const config = {
   test: 'configTest'
@@ -26,7 +25,7 @@ describe('Instance locator', () => {
     let modelDefinition = new ModelDefinition('db', DbModel)
 
     it('Created', () => {
-      assert(modelDefinition instanceof ModelDefinition)
+      expect(modelDefinition).toBeInstanceOf(ModelDefinition)
     })
   })
 
@@ -50,22 +49,22 @@ describe('Instance locator', () => {
 
     it('Find model definition', () => {
       const definition = locator.findModelDefinition(TYPES.db)
-      assert.equal(definition.name, TYPES.db)
+      expect(definition.name).toEqual(TYPES.db)
     })
 
     it('Initiate definition', () => {
       const dbModelDefinition = locator.findModelDefinition(TYPES.db)
       const instanceDefinition = locator.initiateModelDefinition(dbModelDefinition)
-      assert.equal(instanceDefinition.instance.test(), 'dbTest')
+      expect(instanceDefinition.instance.test()).toEqual('dbTest')
     })
 
     it('Get / Nested / single instance.', () => {
       const instance = locator.get(TYPES.db)
       const core = locator.get(TYPES.core)
-      assert.equal(instance.test(), 'dbTest')
-      assert.equal(instance.core.test(), 'coreTest')
-      assert.equal(instance.core.config.test, 'configTest')
-      assert(core == instance.core)
+      expect(instance.test()).toEqual('dbTest')
+      expect(instance.core.test()).toEqual('coreTest')
+      expect(instance.core.config.test).toEqual('configTest')
+      expect(core).toEqual(instance.core)
     })
 
     afterAll(() => {

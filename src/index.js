@@ -1,4 +1,3 @@
-
 const FACTORIES = {
   value: Symbol('value'),
   instance: Symbol('instance')

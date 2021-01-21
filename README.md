@@ -12,7 +12,7 @@ Be free and ask me questions personally on [Gitter](https://gitter.im/vlikin/Lob
 # Basic usage
 #### Register basic models for future instance.
 ```javascript
-const { ContainerLocator } = require('instance-licator')
+import { ContainerLocator } =  from 'instance-licator'
 
 const config = {
   test: 'configTest'
@@ -77,3 +77,8 @@ console.log('Same instances - ', core == instance.core)
 ```
 
 Also check [the basic example](./example/basic.js) and [tests](./test/index.spec.js).
+
+To run the basic example
+```javascript
+npx babel-node ./example/basic.js 
+```

@@ -1,5 +1,5 @@
-// const { ContainerLocator } = require('instance-locator') // Uncomment for your case.
-const { ContainerLocator } = require('../src')
+// import { ContainerLocator }  from 'instance-locator' // Uncomment for your case.
+import { ContainerLocator } from '../src/index'
 
 const config = {
   test: 'configTest'
